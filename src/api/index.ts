@@ -7,6 +7,7 @@ expressWs(app)
 const router = express.Router()
 
 router.ws('/', (ws, req) => {
+    ws.send("Server Connected.");
     ws.on('message', msg => {
         console.log(msg)
     })
